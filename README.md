@@ -2,6 +2,9 @@
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
+## Name: E Sai Ram
+## Reg No: 212224240141
+
 **AIM:**
 
 To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -35,11 +38,6 @@ Figure -02 HALF Subtractor
 
 **Truthtable**
 
-![Screenshot 2024-12-10 181126](https://github.com/user-attachments/assets/1288f68e-db4f-48b2-9aa8-3d06f6acbbfd)
-
-![Screenshot 2024-12-10 181243](https://github.com/user-attachments/assets/b085ba37-e959-44ff-b779-87841048e32c)
-
-
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -54,22 +52,24 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+```
+module half_adder_substractor(a, b, sum, carry, diff, borr);
+input a,b;
+output sum, carry, diff, borr;
+assign sum=(a^b);
+assign carry=(a&b); 
+assign diff=(a^b);
+assign borr=(~a&b);
+endmodule
+```
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-
-Developed by: Sai Ram E RegisterNumber:24000246
-
-RTL Schematic
-
-![Screenshot 2024-12-08 170133](https://github.com/user-attachments/assets/dc0ac762-5b5d-4fe5-8bb9-944b82c05250)
-
-![Screenshot 2024-12-08 175031](https://github.com/user-attachments/assets/11743529-cd78-4830-8eab-62d02a1d0aa7)
-
-Output/TIMING Waveform
-
-![Screenshot (26) - Copy](https://github.com/user-attachments/assets/5ff3f1db-558d-4852-b521-8d22f213c0ae)
-
-![Screenshot (28)](https://github.com/user-attachments/assets/e70e09a1-44ba-4bc1-b3c1-732acfcb6a31)
+**RTL Schematic**
+<img width="1920" height="1135" alt="489950522-6dba8005-072c-4aa7-880e-c0301b386475" src="https://github.com/user-attachments/assets/216b9c69-85a9-45ce-8c9c-19ff7fec3fe3" />
 
 
-Result: Thus the given logic function are implemented using and their operations are verified using verilog programing
+**Output/TIMING Waveform**
+<img width="1920" height="1141" alt="489950630-07648866-70a4-4ed4-8160-70918d16bc39" src="https://github.com/user-attachments/assets/d46aef15-b59c-4cdf-ad4f-943a6d501c06" />
+
+
+**Result:**
+The code is excecuted successfully.
